@@ -5,11 +5,11 @@ Version:	0.0.3
 Release:	2
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/0.0/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-keyring-manager/0.0/%{name}-%{version}.tar.bz2
 # Source0-md5:	3f6e2f3ebe973317eeface0b8ffff090
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
-Buildrequires:	GConf2-devel >= 2.6.0
+BuildRequires:	GConf2-devel >= 2.6.0
 BuildRequires:	gnome-keyring-devel >= 0.3.2
 BuildRequires:	gtk+2-devel >= 2:2.4.4
 BuildRequires:	libglade2-devel >= 1:2.4.0
