@@ -1,19 +1,20 @@
 Summary:	Keyring manager for GNOME
 Summary(pl):	Zarz±dzanie kluczami dla GNOME
 Name:		gnome-keyring-manager
-Version:	0.0.3
-Release:	2
+Version:	0.0.4
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-keyring-manager/0.0/%{name}-%{version}.tar.bz2
-# Source0-md5:	3f6e2f3ebe973317eeface0b8ffff090
+# Source0-md5:	6c44751e9d5fa25559a751fc9751606f
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.6.0
-BuildRequires:	gnome-keyring-devel >= 0.3.2
+BuildRequires:	GConf2-devel >= 2.8.1
+BuildRequires:	gnome-keyring-devel >= 0.4.1
 BuildRequires:	gtk+2-devel >= 2:2.4.4
-BuildRequires:	libglade2-devel >= 1:2.4.0
-BuildRequires:	libgnomeui-devel >= 2.6.0
+BuildRequires:	intltool >= 0.23
+BuildRequires:	libglade2-devel >= 1:2.4.1
+BuildRequires:	libgnomeui-devel >= 2.8.0
 Requires(post):	GConf2
 Requires:	gtk+2 >= 2:2.4.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -40,6 +41,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
+
+rm -r $RPM_BUILD_ROOT%{_datadir}/locale/no
 
 %find_lang %{name}
 
