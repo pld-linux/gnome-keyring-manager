@@ -21,7 +21,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 GNOME Keyring Manager is an application that manages user keyrings.
 
 %description -l pl
-GNOME Keyring Manager jest aplikacj± s³u¿±c± do zarz±dzania kluczami u¿ytkownika.
+GNOME Keyring Manager jest aplikacj± s³u¿±c± do zarz±dzania kluczami
+u¿ytkownika.
 
 %prep
 %setup -q
