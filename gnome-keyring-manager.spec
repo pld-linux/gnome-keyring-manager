@@ -2,10 +2,10 @@ Summary:	Keyring manager for GNOME
 Summary(pl):	Zarz±dzanie kluczami dla GNOME
 Name:		gnome-keyring-manager
 Version:	0.0.4
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-keyring-manager/0.0/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-keyring-manager/0.0/%{name}-%{version}.tar.bz2
 # Source0-md5:	6c44751e9d5fa25559a751fc9751606f
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
@@ -15,7 +15,8 @@ BuildRequires:	gtk+2-devel >= 2:2.4.4
 BuildRequires:	intltool >= 0.23
 BuildRequires:	libglade2-devel >= 1:2.4.1
 BuildRequires:	libgnomeui-devel >= 2.8.0
-Requires(post):	GConf2
+BuildRequires:	rpmbuild(macros) >= 1.197
+Requires(post,preun):	GConf2
 Requires:	gtk+2 >= 2:2.4.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -50,7 +51,10 @@ rm -r $RPM_BUILD_ROOT%{_datadir}/locale/no
 rm -rf $RPM_BUILD_ROOT
 
 %post
-%gconf_schema_install
+%gconf_schema_install gnome-keyring-manager.schemas
+
+%preun
+%gconf_schema_uninstall gnome-keyring-manager.schemas
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
