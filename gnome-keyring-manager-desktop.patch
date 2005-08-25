@@ -1,6 +1,6 @@
-diff -urN gnome-keyring-manager-0.0.3.orig/gnome-keyring-manager.desktop.in.in gnome-keyring-manager-0.0.3/gnome-keyring-manager.desktop.in.in
---- gnome-keyring-manager-0.0.3.orig/gnome-keyring-manager.desktop.in.in	2004-11-17 13:34:07.517253736 +0100
-+++ gnome-keyring-manager-0.0.3/gnome-keyring-manager.desktop.in.in	2004-11-17 13:34:32.275489912 +0100
+diff -urN gnome-keyring-manager-2.11.92.orig/data/gnome-keyring-manager.desktop.in.in gnome-keyring-manager-2.11.92/data/gnome-keyring-manager.desktop.in.in
+--- gnome-keyring-manager-2.11.92.orig/data/gnome-keyring-manager.desktop.in.in	2005-03-25 16:41:46.000000000 +0100
++++ gnome-keyring-manager-2.11.92/data/gnome-keyring-manager.desktop.in.in	2005-08-24 21:16:15.760210344 +0200
 @@ -10,4 +10,4 @@
  X-GNOME-Bugzilla-Product=gnome-keyring-manager
  X-GNOME-Bugzilla-Component=general
