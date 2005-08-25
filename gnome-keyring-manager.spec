@@ -1,23 +1,24 @@
 Summary:	Keyring manager for GNOME
 Summary(pl):	Zarz±dzanie kluczami dla GNOME
 Name:		gnome-keyring-manager
-Version:	0.0.4
-Release:	2
+Version:	2.11.92
+Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-keyring-manager/0.0/%{name}-%{version}.tar.bz2
-# Source0-md5:	6c44751e9d5fa25559a751fc9751606f
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-keyring-manager/2.11/%{name}-%{version}.tar.bz2
+# Source0-md5:	73ad2540e61970442f880eb24b595d74
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.8.1
+BuildRequires:	gnome-doc-utils >= 0.3.1-2
 BuildRequires:	gnome-keyring-devel >= 0.4.1
-BuildRequires:	gtk+2-devel >= 2:2.4.4
+BuildRequires:	gtk+2-devel >= 2:2.6.0
 BuildRequires:	intltool >= 0.23
 BuildRequires:	libglade2-devel >= 1:2.4.1
 BuildRequires:	libgnomeui-devel >= 2.8.0
 BuildRequires:	rpmbuild(macros) >= 1.197
 Requires(post,preun):	GConf2
-Requires:	gtk+2 >= 2:2.4.4
+Requires:	gtk+2 >= 2:2.6.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,8 +33,11 @@ u¿ytkownika.
 %patch0 -p1
 
 %build
+gnome-doc-prepare --copy --force
+%{__gnome_doc_common}
 %configure \
-	--disable-schemas-install
+	--disable-schemas-install \
+	--disable-scrollkeeper
 %{__make}
 
 %install
@@ -45,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 
 rm -r $RPM_BUILD_ROOT%{_datadir}/locale/no
 
-%find_lang %{name}
+%find_lang %{name}  --with-gnome
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -60,5 +64,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog HACKING NEWS README TODO
 %attr(755,root,root) %{_bindir}/*
-%{_sysconfdir}/gconf/schemas/*.schemas
+%{_datadir}/*
 %{_desktopdir}/*
+%{_sysconfdir}/gconf/schemas/gnome-keyring-manager.schemas
