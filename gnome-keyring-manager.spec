@@ -1,15 +1,15 @@
 Summary:	Keyring manager for GNOME
 Summary(pl):	Zarz±dzanie kluczami dla GNOME
 Name:		gnome-keyring-manager
-Version:	2.12.0
-Release:	2
+Version:	2.14.0
+Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-keyring-manager/2.12/%{name}-%{version}.tar.bz2
-# Source0-md5:	0a588c64839390e0c6e07250b509a86a
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-keyring-manager/2.14/%{name}-%{version}.tar.bz2
+# Source0-md5:	d4e38c7b7da99885fa898917e10d8aeb
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.12.0
+BuildRequires:	GConf2-devel >= 2.14.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gnome-doc-utils >= 0.4.0
@@ -17,7 +17,7 @@ BuildRequires:	gnome-keyring-devel >= 0.4.4
 BuildRequires:	gtk+2-devel >= 2:2.8.3
 BuildRequires:	intltool >= 0.34
 BuildRequires:	libglade2-devel >= 1:2.5.1
-BuildRequires:	libgnomeui-devel >= 2.12.0
+BuildRequires:	libgnomeui-devel >= 2.14.0
 BuildRequires:	rpmbuild(macros) >= 1.197
 BuildRequires:	scrollkeeper
 Requires(post,preun):	GConf2
