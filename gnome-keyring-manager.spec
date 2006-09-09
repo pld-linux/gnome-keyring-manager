@@ -1,30 +1,30 @@
 Summary:	Keyring manager for GNOME
 Summary(pl):	Zarz±dzanie kluczami dla GNOME
 Name:		gnome-keyring-manager
-Version:	2.15.92
+Version:	2.16.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-keyring-manager/2.15/%{name}-%{version}.tar.bz2
-# Source0-md5:	1b32b61ea9b38d9c0f2c6e11c548d875
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-keyring-manager/2.16/%{name}-%{version}.tar.bz2
+# Source0-md5:	d63bfa5e9cfe334694438a74c157344c
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.14.0
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gnome-doc-utils >= 0.7.2
-BuildRequires:	gnome-keyring-devel >= 0.5.2
-BuildRequires:	gtk+2-devel >= 2:2.10.2
+BuildRequires:	gnome-doc-utils >= 0.8.0
+BuildRequires:	gnome-keyring-devel >= 0.6.0
+BuildRequires:	gtk+2-devel >= 2:2.10.3
 BuildRequires:	intltool >= 0.35
 BuildRequires:	libglade2-devel >= 1:2.6.0
-BuildRequires:	libgnomeui-devel >= 2.15.91
+BuildRequires:	libgnomeui-devel >= 2.16.0
 BuildRequires:	rpmbuild(macros) >= 1.311
 BuildRequires:	scrollkeeper
 Requires(post,preun):	GConf2
 Requires(post,postun):	scrollkeeper
-Requires:	gnome-keyring-libs >= 0.5.2
-Requires:	gtk+2 >= 2:2.10.2
-Requires:	libgnomeui >= 2.15.91
+Requires:	gnome-keyring-libs >= 0.6.0
+Requires:	gtk+2 >= 2:2.10.3
+Requires:	libgnomeui >= 2.16.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -55,8 +55,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
-
-#rm -r $RPM_BUILD_ROOT%{_datadir}/locale/no
 
 %find_lang %{name}  --with-gnome
 
