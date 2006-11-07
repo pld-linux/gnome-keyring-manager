@@ -76,7 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog HACKING NEWS README TODO
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_mandir}/man1/*
 %{_omf_dest_dir}/%{name}
 %{_sysconfdir}/gconf/schemas/gnome-keyring-manager.schemas
