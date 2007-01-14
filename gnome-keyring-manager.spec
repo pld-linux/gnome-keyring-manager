@@ -1,12 +1,16 @@
+#
+# TODO:
+# - should there be R: libgnomeui >= 2.6.17?
+#
 Summary:	Keyring manager for GNOME
 Summary(pl):	Zarz±dzanie kluczami dla GNOME
 Name:		gnome-keyring-manager
-Version:	2.16.0
-Release:	1
+Version:	2.17.0
+Release:	0.1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-keyring-manager/2.16/%{name}-%{version}.tar.bz2
-# Source0-md5:	d63bfa5e9cfe334694438a74c157344c
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-keyring-manager/2.17/%{name}-%{version}.tar.bz2
+# Source0-md5:	8dc9c133ccdfb2729898a05afa177a0d
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.14.0
