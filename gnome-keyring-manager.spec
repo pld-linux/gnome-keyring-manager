@@ -1,6 +1,6 @@
 #
 # TODO:
-# - should there be R: libgnomeui >= 2.6.17?
+# - should there be R: libgnomeui >= 2.17?
 #
 Summary:	Keyring manager for GNOME
 Summary(pl):	Zarz±dzanie kluczami dla GNOME
