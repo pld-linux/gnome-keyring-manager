@@ -3,7 +3,7 @@
 # - should there be R: libgnomeui >= 2.17?
 #
 Summary:	Keyring manager for GNOME
-Summary(pl):	Zarz±dzanie kluczami dla GNOME
+Summary(pl.UTF-8):   ZarzÄ…dzanie kluczami dla GNOME
 Name:		gnome-keyring-manager
 Version:	2.17.0
 Release:	0.1
@@ -34,9 +34,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 GNOME Keyring Manager is an application that manages user keyrings.
 
-%description -l pl
-GNOME Keyring Manager jest aplikacj± s³u¿±c± do zarz±dzania kluczami
-u¿ytkownika.
+%description -l pl.UTF-8
+GNOME Keyring Manager jest aplikacjÄ… sÅ‚uÅ¼Ä…cÄ… do zarzÄ…dzania kluczami
+uÅ¼ytkownika.
 
 %prep
 %setup -q
