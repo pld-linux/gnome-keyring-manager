@@ -3,7 +3,7 @@
 # - should there be R: libgnomeui >= 2.17?
 #
 Summary:	Keyring manager for GNOME
-Summary(pl.UTF-8):   Zarządzanie kluczami dla GNOME
+Summary(pl.UTF-8):	Zarządzanie kluczami dla GNOME
 Name:		gnome-keyring-manager
 Version:	2.17.0
 Release:	0.1
