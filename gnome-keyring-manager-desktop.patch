@@ -1,9 +1,0 @@
-diff -aurN gnome-keyring-manager-2.15.92.orig/data/gnome-keyring-manager.desktop.in.in gnome-keyring-manager-2.15.92/data/gnome-keyring-manager.desktop.in.in
---- gnome-keyring-manager-2.15.92.orig/data/gnome-keyring-manager.desktop.in.in	2006-08-02 22:14:45.000000000 +0200
-+++ gnome-keyring-manager-2.15.92/data/gnome-keyring-manager.desktop.in.in	2006-08-22 20:40:47.000000000 +0200
-@@ -10,4 +10,4 @@
- X-GNOME-Bugzilla-Product=gnome-keyring-manager
- X-GNOME-Bugzilla-Component=general
- X-GNOME-Bugzilla-Version=@VERSION@
--Categories=GNOME;GTK;System;Utility;Settings;
-+Categories=GTK;GNOME;Utility;
