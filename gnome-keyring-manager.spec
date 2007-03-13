@@ -1,34 +1,30 @@
-#
-# TODO:
-# - should there be R: libgnomeui >= 2.17?
-#
 Summary:	Keyring manager for GNOME
 Summary(pl.UTF-8):	Zarządzanie kluczami dla GNOME
 Name:		gnome-keyring-manager
-Version:	2.17.0
-Release:	0.1
+Version:	2.18.0
+Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-keyring-manager/2.17/%{name}-%{version}.tar.bz2
-# Source0-md5:	8dc9c133ccdfb2729898a05afa177a0d
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-keyring-manager/2.18/%{name}-%{version}.tar.bz2
+# Source0-md5:	05183cdea9d933cb1e9a8f4202c6ffc0
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.14.0
+BuildRequires:	GConf2-devel >= 2.18.0.1
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gnome-doc-utils >= 0.8.0
-BuildRequires:	gnome-keyring-devel >= 0.6.0
-BuildRequires:	gtk+2-devel >= 2:2.10.3
-BuildRequires:	intltool >= 0.35
+BuildRequires:	gnome-doc-utils >= 0.10.1
+BuildRequires:	gnome-keyring-devel >= 0.8
+BuildRequires:	gtk+2-devel >= 2:2.10.10
+BuildRequires:	intltool >= 0.35.5
 BuildRequires:	libglade2-devel >= 1:2.6.0
-BuildRequires:	libgnomeui-devel >= 2.16.0
+BuildRequires:	libgnomeui-devel >= 2.18.0
 BuildRequires:	rpmbuild(macros) >= 1.311
 BuildRequires:	scrollkeeper
 Requires(post,preun):	GConf2
 Requires(post,postun):	scrollkeeper
-Requires:	gnome-keyring-libs >= 0.6.0
-Requires:	gtk+2 >= 2:2.10.3
-Requires:	libgnomeui >= 2.16.0
+Requires:	gnome-keyring-libs >= 0.8
+Requires:	gtk+2 >= 2:2.10.10
+Requires:	libgnomeui >= 2.18.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
