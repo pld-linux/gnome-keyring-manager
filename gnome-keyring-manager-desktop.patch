@@ -5,5 +5,5 @@ diff -aurN gnome-keyring-manager-2.15.92.orig/data/gnome-keyring-manager.desktop
  X-GNOME-Bugzilla-Product=gnome-keyring-manager
  X-GNOME-Bugzilla-Component=general
  X-GNOME-Bugzilla-Version=@VERSION@
--Categories=GNOME;GTK;Application;System;Utility;
+-Categories=GNOME;GTK;System;Utility;Settings;
 +Categories=GTK;GNOME;Utility;
