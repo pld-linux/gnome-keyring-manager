@@ -1,12 +1,12 @@
 Summary:	Keyring manager for GNOME
 Summary(pl.UTF-8):	Zarządzanie kluczami dla GNOME
 Name:		gnome-keyring-manager
-Version:	2.18.0
+Version:	2.19.92
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-keyring-manager/2.18/%{name}-%{version}.tar.bz2
-# Source0-md5:	05183cdea9d933cb1e9a8f4202c6ffc0
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-keyring-manager/2.19/%{name}-%{version}.tar.bz2
+# Source0-md5:	162105ae1e4021eab4c613a4ca7e6bb9
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.18.0.1
@@ -40,6 +40,7 @@ użytkownika.
 
 %build
 %{__gnome_doc_prepare}
+%{__intltoolize}
 %{__aclocal}
 %{__automake}
 %{__autoconf}
