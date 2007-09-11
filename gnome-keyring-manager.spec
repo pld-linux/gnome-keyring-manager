@@ -5,26 +5,27 @@ Version:	2.19.92
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-keyring-manager/2.19/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-keyring-manager/2.19/%{name}-%{version}.tar.bz2
 # Source0-md5:	162105ae1e4021eab4c613a4ca7e6bb9
 Patch0:		%{name}-desktop.patch
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.18.0.1
-BuildRequires:	autoconf
+BuildRequires:	GConf2-devel >= 2.19.1
+BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
-BuildRequires:	gnome-doc-utils >= 0.10.1
-BuildRequires:	gnome-keyring-devel >= 0.8
-BuildRequires:	gtk+2-devel >= 2:2.10.10
-BuildRequires:	intltool >= 0.35.5
-BuildRequires:	libglade2-devel >= 1:2.6.0
-BuildRequires:	libgnomeui-devel >= 2.18.0
+BuildRequires:	gnome-doc-utils >= 0.11.2
+BuildRequires:	gnome-keyring-devel >= 2.19.91
+BuildRequires:	gtk+2-devel >= 2:2.10.14
+BuildRequires:	intltool >= 0.36.1
+BuildRequires:	libtool
+BuildRequires:	libglade2-devel >= 1:2.6.2
+BuildRequires:	libgnomeui-devel >= 2.19.1
 BuildRequires:	rpmbuild(macros) >= 1.311
 BuildRequires:	scrollkeeper
 Requires(post,preun):	GConf2
 Requires(post,postun):	scrollkeeper
-Requires:	gnome-keyring-libs >= 0.8
-Requires:	gtk+2 >= 2:2.10.10
-Requires:	libgnomeui >= 2.18.0
+Requires:	gnome-keyring-libs >= 2.19.91
+Requires:	gtk+2 >= 2:2.10.14
+Requires:	libgnomeui >= 2.19.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -40,6 +41,8 @@ użytkownika.
 
 %build
 %{__gnome_doc_prepare}
+%{__glib_gettextize}
+%{__intltoolize}
 %{__intltoolize}
 %{__aclocal}
 %{__automake}
@@ -79,5 +82,15 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}
 %{_desktopdir}/*.desktop
 %{_mandir}/man1/*
-%{_omf_dest_dir}/%{name}
+%dir %{_omf_dest_dir}/%{name}
+%{_omf_dest_dir}/gnome-keyring-manager/gnome-keyring-manager-C.omf
+%lang(ca) %{_omf_dest_dir}/gnome-keyring-manager/gnome-keyring-manager-ca.omf
+%lang(da) %{_omf_dest_dir}/gnome-keyring-manager/gnome-keyring-manager-da.omf
+%lang(en_GB) %{_omf_dest_dir}/gnome-keyring-manager/gnome-keyring-manager-en_GB.omf
+%lang(es) %{_omf_dest_dir}/gnome-keyring-manager/gnome-keyring-manager-es.omf
+%lang(fr) %{_omf_dest_dir}/gnome-keyring-manager/gnome-keyring-manager-fr.omf
+%lang(oc) %{_omf_dest_dir}/gnome-keyring-manager/gnome-keyring-manager-oc.omf
+%lang(sv) %{_omf_dest_dir}/gnome-keyring-manager/gnome-keyring-manager-sv.omf
+%lang(uk) %{_omf_dest_dir}/gnome-keyring-manager/gnome-keyring-manager-uk.omf
+%lang(vi) %{_omf_dest_dir}/gnome-keyring-manager/gnome-keyring-manager-vi.omf
 %{_sysconfdir}/gconf/schemas/gnome-keyring-manager.schemas
