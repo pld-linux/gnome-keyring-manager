@@ -2,7 +2,7 @@ Summary:	Keyring manager for GNOME
 Summary(pl.UTF-8):	Zarządzanie kluczami dla GNOME
 Name:		gnome-keyring-manager
 Version:	2.20.0
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-keyring-manager/2.20/%{name}-%{version}.tar.bz2
@@ -26,6 +26,8 @@ Requires(post,postun):	scrollkeeper
 Requires:	gnome-keyring-libs >= 2.20.0
 Requires:	gtk+2 >= 2:2.12.0
 Requires:	libgnomeui >= 2.12.0
+# sr@Latn vs. sr@latin
+Conflicts:	glibc-misc < 6:2.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -60,6 +62,8 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
+[ -d $RPM_BUILD_ROOT%{_datadir}/locale/sr@latin ] || \
+	mv -f $RPM_BUILD_ROOT%{_datadir}/locale/sr@{Latn,latin}
 %find_lang %{name}  --with-gnome
 
 %clean
