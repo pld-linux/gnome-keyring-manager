@@ -12,6 +12,7 @@ URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.20.0
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
+BuildRequires:	gnome-common
 BuildRequires:	gnome-doc-utils >= 0.11.2
 BuildRequires:	gnome-keyring-devel >= 2.19.91
 BuildRequires:	gtk+2-devel >= 2:2.12.0
