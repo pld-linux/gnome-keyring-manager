@@ -12,18 +12,22 @@ URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.20.0
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
+BuildRequires:	docbook-dtd42-xml
+BuildRequires:	gettext-devel
 BuildRequires:	gnome-common
 BuildRequires:	gnome-doc-utils >= 0.11.2
 BuildRequires:	gnome-keyring-devel >= 2.19.91
 BuildRequires:	gtk+2-devel >= 2:2.12.0
 BuildRequires:	intltool >= 0.36.1
-BuildRequires:	libtool
 BuildRequires:	libglade2-devel >= 1:2.6.2
 BuildRequires:	libgnomeui-devel >= 2.20.0
+BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.311
 BuildRequires:	scrollkeeper
-Requires(post,preun):	GConf2
+BuildRequires:	xorg-xserver-server
 Requires(post,postun):	scrollkeeper
+Requires(post,preun):	GConf2
 Requires:	gnome-keyring-libs >= 2.20.0
 Requires:	gtk+2 >= 2:2.12.0
 Requires:	libgnomeui >= 2.12.0
@@ -46,7 +50,7 @@ użytkownika.
 %{__gnome_doc_prepare}
 %{__glib_gettextize}
 %{__intltoolize}
-%{__intltoolize}
+%{__libtoolize}
 %{__aclocal}
 %{__automake}
 %{__autoconf}
